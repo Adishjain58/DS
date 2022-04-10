@@ -5,9 +5,13 @@ const insertionSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     // run second loop from 0 to i-1 index
     for (let j = 0; j < i; j++) {
+      console.log(
+        `i: ${i} A[${i}]: ${arr[i]} j: ${j} A[${j}]: ${arr[j]} arr: [${arr}]`
+      );
       // if value at j index is greater than i index then shift elements to right and set value at jth index to value of ith index
       if (arr[j] > arr[i]) {
         moveElementsToRightAndSwap(arr, i, j);
+        break;
       }
     }
   }
@@ -26,5 +30,5 @@ const moveElementsToRightAndSwap = (arr, i, j) => {
   arr[j] = elem;
 };
 
-let arr = [9646, 3536, 7689, 246, 7589, 2436, 1578, 24365];
+let arr = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 console.log(insertionSort(arr));

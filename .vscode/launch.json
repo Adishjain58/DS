@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch BinarySearch",
+      "request": "launch",
+      "mainClass": "Searching.BinarySearch",
+      "projectName": "DS_3d954c8"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Java.StackAndQueue.Main",
+      "projectName": "DS_3d954c8"
+    },
+    {
+      "type": "java",
+      "name": "Launch QueueUsingStack",
+      "request": "launch",
+      "mainClass": "Java.StackAndQueue.QueueUsingStack",
+      "projectName": "DS_3d954c8"
+    },
+    {
+      "type": "java",
+      "name": "Launch Queue",
+      "request": "launch",
+      "mainClass": "Java.StackAndQueue.Queue",
+      "projectName": "DS_3d954c8"
+    },
+    {
+      "type": "java",
+      "name": "Launch BinarySearchTree",
+      "request": "launch",
+      "mainClass": "Tree.BinarySearchTree",
+      "projectName": "DS_3d954c8"
+    },
+    {
+      "type": "java",
+      "name": "Launch QuickSort",
+      "request": "launch",
+      "mainClass": "Sorting.QuickSort",
+      "projectName": "DS_3d954c8"
+    },
+    {
+      "type": "java",
+      "name": "Launch MergeSort",
+      "request": "launch",
+      "mainClass": "Sorting.MergeSort",
+      "projectName": "DS_3d954c8"
+    },
+    {
+      "type": "java",
       "name": "Launch InsertionSort",
       "request": "launch",
       "mainClass": "Sorting.InsertionSort",

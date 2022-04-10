@@ -57,3 +57,10 @@ myGraph.showConnections();
 // 4-->3 2 5
 // 5-->4 6
 // 6-->5
+
+/*
+Imp :- Dijkstra and bellman-form algorithms are used to traverse through a graph when the graph is weighted. i.e. the edges of graph have some values.
+Bellman-form algorith works well if you have negative weights as well, but it's time complexity can go to O(n^2)
+Dijkstra algorithm is faster but it doesn't work with negative weights.
+If the weights are negative as well then use bellman-from algo else use Dijkstra algo.
+*/

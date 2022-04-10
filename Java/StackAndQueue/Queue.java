@@ -5,7 +5,7 @@ public class Queue<T> {
     Node first, last;
     int length;
 
-    Queue() {
+    public Queue() {
         first = null;
         last = null;
         length = 0;
@@ -21,7 +21,7 @@ public class Queue<T> {
         }
     }
 
-    void enqueue(T value) {
+    public void enqueue(T value) {
         Node newItem = new Node(value);
         if (this.length == 0) {
             this.first = newItem;
@@ -33,7 +33,7 @@ public class Queue<T> {
         this.length++;
     }
 
-    T dequeue() {
+    public T dequeue() {
         Node firstItem = this.first;
         if (this.length == 0) {
             System.out.println("Queue is empty");
@@ -64,6 +64,10 @@ public class Queue<T> {
             firstNode = firstNode.next;
         }
         System.out.println();
+    }
+
+    public boolean isEmpty() {
+        return this.length == 0 ? true : false;
     }
 
     public static void main(String[] args) {

@@ -8,6 +8,7 @@ public class InsertionSort {
             for (int j = 0; j < i; j++) {
                 if (arr[j] > arr[i]) {
                     moveElementsToRightAndSwap(arr, i, j);
+                    break;
                 }
             }
         }

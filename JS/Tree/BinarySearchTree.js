@@ -9,6 +9,7 @@ class Node {
   }
 }
 
+// for explanation refer to BinarySearchTree.java
 class BinarySearchTree {
   root;
   constructor() {
@@ -182,18 +183,87 @@ class BinarySearchTree {
       return false;
     }
   };
+
+  breadthFirstSearch = () => {
+    let currentNode = this.root;
+    let res = [];
+    let queue = [];
+    queue.push(currentNode);
+    while (queue.length != 0) {
+      let node = queue.shift();
+      res.push(node.value);
+      if (node.left != null) {
+        queue.push(node.left);
+      }
+      if (node.right != null) {
+        queue.push(node.right);
+      }
+    }
+    return res;
+  };
+
+  breadthFirstSearchRecursive = (queue, list) => {
+    if (queue.length == 0) {
+      return list;
+    }
+
+    let currentNode = queue.shift();
+    list.push(currentNode.value);
+    if (currentNode.left) {
+      queue.push(currentNode.left);
+    }
+    if (currentNode.right) {
+      queue.push(currentNode.right);
+    }
+    return this.breadthFirstSearchRecursive(queue, list);
+  };
+
+  preOrder = (root, arr) => {
+    if (!root) {
+      return;
+    }
+    arr.push(root.value);
+    this.preOrder(root.left, arr);
+    this.preOrder(root.right, arr);
+    return arr;
+  };
+
+  inOrder = (root, arr) => {
+    if (!root) {
+      return;
+    }
+
+    this.inOrder(root.left, arr);
+    arr.push(root.value);
+    this.inOrder(root.right, arr);
+    return arr;
+  };
+
+  postOrder = (root, arr) => {
+    if (!root) {
+      return;
+    }
+
+    this.postOrder(root.left, arr);
+    this.postOrder(root.right, arr);
+    arr.push(root.value);
+    return arr;
+  };
 }
 
 const tree = new BinarySearchTree();
-tree.insert(9);
-tree.insert(4);
+tree.insert(5);
 tree.insert(4);
 tree.insert(6);
-tree.insert(20);
-tree.insert(170);
-tree.insert(165);
-tree.insert(15);
-tree.insert(1);
+tree.insert(null);
+tree.insert(null);
+tree.insert(3);
+tree.insert(7);
+console.log(tree.breadthFirstSearch());
+console.log(tree.breadthFirstSearchRecursive([tree.root], []));
+console.log(tree.preOrder(tree.root, []));
+console.log(tree.inOrder(tree.root, []));
+console.log(tree.postOrder(tree.root, []));
 console.log(JSON.stringify(traverse(tree.root)));
 // console.log(tree.lookup(6));
 // console.log(tree.lookup(20));
