@@ -259,6 +259,7 @@ tree.insert(null);
 tree.insert(null);
 tree.insert(3);
 tree.insert(7);
+tree.insert(20);
 console.log(tree.breadthFirstSearch());
 console.log(tree.breadthFirstSearchRecursive([tree.root], []));
 console.log(tree.preOrder(tree.root, []));

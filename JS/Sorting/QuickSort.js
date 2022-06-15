@@ -25,7 +25,7 @@ const quickSort = (arr, left, right) => {
 const getFinalPivot = (arr, pivot, left) => {
   // run loop from left to pivot index.
   for (let i = left; i < pivot; ) {
-    // if element at arr[i]>arr[pivot] then we will replace arr[i] with arr[pivot-1], arr[pivot-1] with arr[pivot] and arr[pivot] with arr[i];
+    // if element at arr[i]>arr[pivot] then first we will store arr[pivot-1] in temp and then replace , arr[pivot-1] with arr[pivot], arr[pivot] with arr[i] and  arr[i] with temp;
     if (arr[i] > arr[pivot]) {
       // if there are only 2 elements left to compare than swap those and decrease pivot by 1
       if (i == pivot - 1) {
